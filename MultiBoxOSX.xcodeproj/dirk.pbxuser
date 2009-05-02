@@ -1,0 +1,178 @@
+// !$*UTF8*$!
+{
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = 43CAA1E80FAC31EB0026C6DD /* MultiBoxOSX */;
+		activeTarget = 8D1107260486CEB800E47090 /* MultiBoxOSX */;
+		addToTargets = (
+			8D1107260486CEB800E47090 /* MultiBoxOSX */,
+		);
+		codeSenseManager = 43CAA1F70FAC31EE0026C6DD /* Code sense */;
+		executables = (
+			43CAA1E80FAC31EB0026C6DD /* MultiBoxOSX */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					686,
+					20,
+					48.16259765625,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 262943211;
+			PBXWorkspaceStateSaveDate = 262943211;
+		};
+		perUserProjectItems = {
+			43CAA2070FAC330B0026C6DD /* PBXTextBookmark */ = 43CAA2070FAC330B0026C6DD /* PBXTextBookmark */;
+			43CAA2080FAC330B0026C6DD /* PBXTextBookmark */ = 43CAA2080FAC330B0026C6DD /* PBXTextBookmark */;
+			43CAA2090FAC330B0026C6DD /* PBXTextBookmark */ = 43CAA2090FAC330B0026C6DD /* PBXTextBookmark */;
+			43CAA20A0FAC330B0026C6DD /* PBXTextBookmark */ = 43CAA20A0FAC330B0026C6DD /* PBXTextBookmark */;
+			43CAA20B0FAC330B0026C6DD /* PBXTextBookmark */ = 43CAA20B0FAC330B0026C6DD /* PBXTextBookmark */;
+			43CAA20C0FAC330B0026C6DD /* PBXTextBookmark */ = 43CAA20C0FAC330B0026C6DD /* PBXTextBookmark */;
+			43CAA20D0FAC330B0026C6DD /* PBXTextBookmark */ = 43CAA20D0FAC330B0026C6DD /* PBXTextBookmark */;
+		};
+		sourceControlManager = 43CAA1F60FAC31EE0026C6DD /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	43CAA1E80FAC31EB0026C6DD /* MultiBoxOSX */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 1;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = MultiBoxOSX;
+		sourceDirectories = (
+		);
+	};
+	43CAA1F60FAC31EE0026C6DD /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryName = "google code multiboxosx";
+		};
+	};
+	43CAA1F70FAC31EE0026C6DD /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	43CAA1FF0FAC32110026C6DD /* MainController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {864, 560}}";
+			sepNavSelRange = "{370, 0}";
+			sepNavVisRange = "{0, 806}";
+		};
+	};
+	43CAA2000FAC32110026C6DD /* MainController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {864, 3514}}";
+			sepNavSelRange = "{216, 0}";
+			sepNavVisRange = "{0, 851}";
+		};
+	};
+	43CAA2070FAC330B0026C6DD /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 43CAA2000FAC32110026C6DD /* MainController.m */;
+		name = "MainController.m: 11";
+		rLen = 0;
+		rLoc = 216;
+		rType = 0;
+		vrLen = 851;
+		vrLoc = 0;
+	};
+	43CAA2080FAC330B0026C6DD /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 43CAA1FF0FAC32110026C6DD /* MainController.h */;
+		name = "MainController.h: 11";
+		rLen = 0;
+		rLoc = 161;
+		rType = 0;
+		vrLen = 806;
+		vrLoc = 0;
+	};
+	43CAA2090FAC330B0026C6DD /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 43CAA1FF0FAC32110026C6DD /* MainController.h */;
+		name = "MainController.h: 3";
+		rLen = 11;
+		rLoc = 28;
+		rType = 0;
+		vrLen = 806;
+		vrLoc = 0;
+	};
+	43CAA20A0FAC330B0026C6DD /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 43CAA2000FAC32110026C6DD /* MainController.m */;
+		name = "MainController.m: 3";
+		rLen = 0;
+		rLoc = 39;
+		rType = 0;
+		vrLen = 851;
+		vrLoc = 0;
+	};
+	43CAA20B0FAC330B0026C6DD /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 43CAA1FF0FAC32110026C6DD /* MainController.h */;
+		name = "MainController.h: 11";
+		rLen = 0;
+		rLoc = 161;
+		rType = 0;
+		vrLen = 806;
+		vrLoc = 0;
+	};
+	43CAA20C0FAC330B0026C6DD /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 43CAA2000FAC32110026C6DD /* MainController.m */;
+		name = "MainController.m: 11";
+		rLen = 0;
+		rLoc = 216;
+		rType = 0;
+		vrLen = 851;
+		vrLoc = 0;
+	};
+	43CAA20D0FAC330B0026C6DD /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 43CAA1FF0FAC32110026C6DD /* MainController.h */;
+		name = "MainController.h: 17";
+		rLen = 0;
+		rLoc = 370;
+		rType = 0;
+		vrLen = 806;
+		vrLoc = 0;
+	};
+	8D1107260486CEB800E47090 /* MultiBoxOSX */ = {
+		activeExec = 0;
+		executables = (
+			43CAA1E80FAC31EB0026C6DD /* MultiBoxOSX */,
+		);
+	};
+}
