@@ -25,6 +25,7 @@ CGEventRef MyMouseEventTapCallBack (CGEventTapProxy proxy, CGEventType type, CGE
 - (void) awakeFromNib {
 	[NSApplication sharedApplication].delegate = self;
 	[self setUpEventTaps];
+	[self updateUI];
 	//[self cycleThroughProcesses];
 }
 
@@ -44,6 +45,7 @@ CGEventRef MyMouseEventTapCallBack (CGEventTapProxy proxy, CGEventType type, CGE
 				//NSLog(@"string %@", eventString);
 				if ([eventString isEqual:@"#"]) {
 					ignoreEvents = !ignoreEvents;
+					[self updateUI];
 				}
 				//CGEventField field = CGEventGetIntegerValueField(event, kCGKeyboardEventKeycode);
 				//NSLog(@"keycode %d", field);
@@ -251,14 +253,19 @@ CGEventRef MyMouseEventTapCallBack (CGEventTapProxy proxy, CGEventType type, CGE
 	CFRelease(appRef);
 }
 
+- (void) updateUI {
+	if (ignoreEvents) {
+		toggleButton.title = @"Enable";
+		mainWindow.backgroundColor = [NSColor redColor];
+	} else {
+		toggleButton.title = @"Disable";
+		mainWindow.backgroundColor = [NSColor greenColor];
+	}
+}
+
 - (IBAction) enableButton:(id)sender {
 	ignoreEvents = !ignoreEvents;
-	NSButton *button = (NSButton *) sender;
-	if (ignoreEvents) {
-		button.title = @"Enable";
-	} else {
-		button.title = @"Disable";
-	}
+	[self updateUI];
 }
 
 - (NSString *) stringFromEvent:(CGEventRef)event {

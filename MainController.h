@@ -10,6 +10,9 @@
 
 @interface MainController : NSObject {
 
+	IBOutlet NSButton *toggleButton;
+	IBOutlet NSWindow *mainWindow;
+
 	CFMachPortRef machPortKeyboard;
 	CFRunLoopSourceRef machPortRunLoopSourceRefKeyboard;
 	CFMachPortRef machPortMouse;
@@ -17,6 +20,7 @@
 	
 	BOOL ignoreEvents;
 	ProcessSerialNumber lastFrontPsn;
+	
 }
 
 - (CGEventRef) tapKeyboardCallbackWithProxy:(CGEventTapProxy)proxy type:(CGEventType)type event:(CGEventRef)event;
@@ -34,6 +38,7 @@
 
 - (NSString *) stringFromEvent:(CGEventRef)event;
 
+- (void) updateUI;
 - (IBAction) enableButton:(id)sender;
 
 @end
