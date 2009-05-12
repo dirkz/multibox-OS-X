@@ -37,9 +37,10 @@ CGEventRef MyMouseEventTapCallBack (CGEventTapProxy proxy, CGEventType type, CGE
 		if ([self shouldTemperWithPSN:&current]) {
 			//NSLog(@"foreground app should be tempered with");
 			
+			NSString *eventString = nil;
 			// check for ignore key
 			if (type == kCGEventKeyDown) {
-				NSString *eventString = [self stringFromEvent:event];
+				eventString = [self stringFromEvent:event];
 				//NSLog(@"string %@", eventString);
 				if ([eventString isEqual:@"#"]) {
 					ignoreEvents = !ignoreEvents;
@@ -62,11 +63,14 @@ CGEventRef MyMouseEventTapCallBack (CGEventTapProxy proxy, CGEventType type, CGE
 							if (!same) {
 								pid_t cur_pid;
 								GetProcessPID(&psn, &cur_pid);
-								NSLog(@"focusing %d", cur_pid);
+								//NSLog(@"focusing %d", cur_pid);
 								[self focusFirstWindowOfPid:cur_pid];
 								lastFrontPsn = psn;
 							}
 							
+							// basic macro ability
+							// stop follow
+							/*
 							if (type == kCGEventKeyDown) {
 								NSString *eventString = [self stringFromEvent:event];
 								if ([eventString isEqual:@"r"]) {
@@ -80,9 +84,29 @@ CGEventRef MyMouseEventTapCallBack (CGEventTapProxy proxy, CGEventType type, CGE
 									CFRelease(ev2);
 								}
 							}
+							*/
 							//NSString *pn = [self processNameFromPSN:&psn];
 							//NSLog(@"copy to %@", pn);
-							CGEventPostToPSN(&psn, event);
+							
+							// ignore movement keys
+							BOOL ignoreThisEvent = NO;
+							if (eventString && eventString.length == 1) {
+								char c = (char) [eventString characterAtIndex:0];
+								switch (c) {
+									case 'e':
+									case 'd':
+									case 's':
+									case 'f':
+										ignoreThisEvent = YES;
+										//NSLog(@"ignored key %c", c);
+										break;
+									default:
+										break;
+								}
+							}
+							if (!ignoreThisEvent) {
+								CGEventPostToPSN(&psn, event);
+							}
 						}
 					}
 				}
@@ -117,7 +141,7 @@ CGEventRef MyMouseEventTapCallBack (CGEventTapProxy proxy, CGEventType type, CGE
 				if (!same) {
 					pid_t cur_pid;
 					GetProcessPID(&psn, &cur_pid);
-					NSLog(@"mouse focusing %d", cur_pid);
+					//NSLog(@"mouse focusing %d", cur_pid);
 					[self focusFirstWindowOfPid:cur_pid];
 					lastFrontPsn = psn;
 				}
