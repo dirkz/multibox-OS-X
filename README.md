@@ -2,6 +2,7 @@ Project backup from https://code.google.com/p/multiboxosx/
 
 (c) 2016 Dirk Zimmermann
 
+```
 // Multibox-OS-X is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
 // the Free Software Foundation, either version 3 of the License, or
@@ -14,3 +15,4 @@ Project backup from https://code.google.com/p/multiboxosx/
 //
 // You should have received a copy of the GNU General Public License
 // along with Multibox-OS-X.  If not, see <http://www.gnu.org/licenses/>.
+```
